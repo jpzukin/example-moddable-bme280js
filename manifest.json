@@ -1,0 +1,20 @@
+{
+  "include": [
+    "$(MODDABLE)/examples/manifest_base.json",
+    "$(MODDABLE)/examples/manifest_piu.json",
+    "$(MODDABLE)/modules/pins/i2c/manifest.json"
+  ],
+  "modules": {
+    "*": [
+      "./main",
+      "./bme280"
+    ],
+    "pins/i2c": "$(MODDABLE)/modules/pins/i2c/i2c"
+  },
+  "resources": {
+    "*-alpha": [
+      "$(MODDABLE)/examples/assets/fonts/OpenSans-Semibold-28"
+    ]
+  }
+}
+
